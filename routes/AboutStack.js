@@ -1,12 +1,11 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Home from '../src/screens/Home';
-import ReviewDetails from '../src/screens/ReviewDetails'
+import About from '../src/screens/About'
 
 const Stack = createStackNavigator();
 
-const HomeStack = () => {
+const AbouStack = () => {
     return (
         <Stack.Navigator screenOptions={{
             headerTintColor: '#444',
@@ -15,14 +14,11 @@ const HomeStack = () => {
                 height: 80
             }
         }}>
-            <Stack.Screen name="Home" component={Home} options={{
-                title: 'GameZone',
-            }} />
-            <Stack.Screen name="Details" component={ReviewDetails} options={{
-                title: 'Review Details',
+            <Stack.Screen name="About" component={About} options={{
+                title: 'About GameZone',
             }} />
         </Stack.Navigator>
     );
 }
 
-export default HomeStack;
+export default AbouStack;
